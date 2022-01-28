@@ -1,6 +1,6 @@
 /* Hide text */
-p, h2, h1, a, label, input, button {
-    color: transparent !important;
+p, h2, h1, label, button {
+    visibility: hidden;
 }
 
 html {
