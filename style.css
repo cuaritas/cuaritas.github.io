@@ -1,3 +1,8 @@
+/* Hide text */
+p, h2, h1, a, label, input, button {
+    color: transparent !important;
+}
+
 html {
     background: linear-gradient(#222531 0%, #292d3ed1 413px);
     min-height: 100vh;
