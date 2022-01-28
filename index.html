@@ -1,14 +1,111 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="L2 Swap for you">
   <title>Cuaritas</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <h1>Work in Progress</h1>
-  <p>A new way to gain interest in your lightning channel is in the making...</p>
+  <header>
+    <a href="#" class="icon">
+      <img src="logo.svg" alt="logo">
+    </a>
+    <h1><a href="/">Cuaritas</a></h1>
+    <nav>
+      <a href="#" id="about">About</a>
+      <a href="#" id="settings">Settings</a>
+    </nav>
+  </header>
+  <main>
+    <div class="title">
+      <h2>Cuaritas Swap</h2>
+      <p>Swap your small amounts between L1 and L2 in the Lightning Network with the lowest fees.</p>
+    </div>
+    <div class="content form">
+      <form class="form">
+        <div class="form-group">
+          <label for="source">Source amount</label>
+          <input type="text" id="source" class="input" placeholder="0">
+        </div>
+        <div class="arrow">▼</div>
+        <div class="form-group">
+          <label for="destination">Destination address or invoice</label>
+          <input type="text" id="destination" class="input" placeholder="...">
+        </div>
+        <div class="form-group">
+          <button class="swap button">Swap</button>
+        </div>
+      </form>
+    </div>
+    <footer>
+      <p><a href="#" class="mail">Any issue? Just let me know!</a></p>
+    </footer>
+  </main>
+
+  <div class="modal about">
+    <div class="modal-content">
+      <div class="title">
+        <span class="close">&times;</span>
+        <h2>About</h2>
+        <p>This is a bridge to swap sats bewteen L1 and L2 in the Lightning Network.<br>I put below some questions you
+          may have.</p>
+      </div>
+      <div class="content form">
+        <p>
+          <strong>What are the limits?</strong><br>
+          The limits are pretty low, from min 1000 sats to just about max 10000 sats, this is just an experiment right
+          now. I'm working to make it better.
+        </p>
+        <p>
+          <strong>Do you have a Lightning Node?</strong><br>
+          Yes, wanna connect to it? <a
+            href="https://lightningnetwork.plus/nodes/03e7299ced214b19b87ed87979462d9aee3ec07a42fe6e2211854bfa4cb32b0bb8">Check
+            it out!</a>
+        </p>
+        <p>
+          <strong>Is this swap custodial?</strong><br>
+          Right now, Yes. Future ideas include non-custodial ways using eltoo contracts and pools to gain interest in
+          your lightning channels.
+        </p>
+        <p>
+          <strong>What tools or framework do you use?</strong><br>
+          Everything in this site is plain HTML+CSS+JS, no frameworks, neither in frontend or backend. The backend is
+          just a shell script talking to LND.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal settings">
+    <div class="modal-content">
+      <div class="title">
+        <span class="close">&times;</span>
+        <h2>Settings</h2>
+        <p>Configure your default wallet for L1</p>
+      </div>
+      <div class="content form">
+        <h2>Wallet</h2>
+        <p>Nothing is stored in servers, I have no database, all data is stored locally only, if you delete the cache
+          your data is gone.</p>
+        <form action="">
+          <div class="form-group">
+            <label for="wallet">Address</label>
+            <input type="text" id="wallet" class="input" placeholder="...">
+          </div>
+          <button class="save button">Save</button>
+        </form>
+        <h2>History</h2>
+        <p>Your list of orders in this device</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+
 </body>
+
 </html>
