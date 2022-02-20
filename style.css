@@ -7,7 +7,7 @@ p, h2, h1, label, button {
 html {
     background: linear-gradient(#222531 0%, #292d3ed1 413px);
     min-height: 100vh;
-    animation: fondo 10s infinite;
+    animation: fondo 300s infinite;
 }
 
 @keyframes fondo {
@@ -129,6 +129,10 @@ h2 {
     background-color: #e24d7f;
 }
 
+.swap.button:disabled {
+    background: #ff91b6;
+}
+
 .button.swap {
     width: 100%;
 }
@@ -153,13 +157,19 @@ main {
 
 .input {
     background: none;
-    padding: 10px 11px 10px 17px;
+    padding: 10px 17px 10px 17px;
     font-weight: bold;
     font-size: larger;
     width: 100%;
     margin: 0;
     border: 0;
     box-sizing: border-box;
+}
+
+.input#source {
+    margin-right: -50px;
+    padding-right: 50px;
+    text-align: end;
 }
 
 .input:focus {
@@ -185,7 +195,7 @@ main {
 
 .arrow {
     text-align: center;
-    color: #e91e63;
+    fill: #e91e63;
 }
 
 .modal {
@@ -219,4 +229,55 @@ main {
     color: #f1f1f1;
     text-decoration: none;
     cursor: pointer;
+}
+
+.badge {
+    border-radius: 50%;
+    background: #ff0000;
+    color: black;
+    width: 10px;
+    display: inline-block;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: top;
+}
+
+.center {
+    text-align: center;
+}
+
+.break {
+    word-break: break-all;
+}
+
+.sats {
+    font-size: inherit;
+    font-weight: bold;
+    color: #8f8a8af0;
+}
+
+.swaping {
+    animation: jump 1s infinite;
+}
+
+@keyframes jump {
+    0% {
+        transform: translate(0, 5px);
+    }
+
+    50% {
+        transform: translate(0, -5px);
+    }
+
+    100% {
+        transform: translate(0, 5px);
+    }
+}
+
+#qr > img {
+    margin: 0 auto;
+}
+
+ul {
+  font-size: 14px;
 }
