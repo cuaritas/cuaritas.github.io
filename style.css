@@ -1,7 +1,8 @@
-/* Hide text */
+/* Hide text 
 p, h2, h1, label, button {
     visibility: hidden;
 }
+*/
 
 html {
     background: linear-gradient(#222531 0%, #292d3ed1 413px);
